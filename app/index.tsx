@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { View, Text, ScrollView, StyleSheet } from 'react-native';
-import { Link } from 'expo-router';
+
 import WaterProgress from '@/components/WaterProgress';
 import QuickAdd from '@/components/QuickAdd';
 import DailyLog from '@/components/DailyLog';
@@ -30,14 +30,7 @@ export default function HomeScreen() {
       <WaterProgress currentMl={todayTotalMl} goalMl={goalMl} />
       <QuickAdd onAdd={addWater} />
       <DailyLog />
-      <View style={styles.navRow}>
-        <Link href="/history" style={styles.navButton}>
-          <Text style={styles.navButtonText}>📊 History</Text>
-        </Link>
-        <Link href="/settings" style={styles.navButton}>
-          <Text style={styles.navButtonText}>⚙️ Settings</Text>
-        </Link>
-      </View>
+
     </ScrollView>
   );
 }
@@ -57,23 +50,5 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 12,
   },
-  navRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    marginTop: 24,
-    marginBottom: 8,
-  },
-  navButton: {
-    backgroundColor: Colors.primary,
-    paddingVertical: 12,
-    paddingHorizontal: 24,
-    borderRadius: 24,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  navButtonText: {
-    color: '#FFFFFF',
-    fontSize: 16,
-    fontWeight: '600',
-  },
+
 });
