@@ -5,6 +5,6 @@
 	// accept expo-app as a first-class template, so the deploy catalogs and zips it
 	// automatically. The app is detected as Expo by name (EXPO_TEMPLATE_NAMES), not
 	// by this file.
-	"name": "expo-app",
+	"name": "build-a-water-intake-xyaar2efndsdrpm1gcyuq",
 	"compatibility_date": "2025-06-01"
 }

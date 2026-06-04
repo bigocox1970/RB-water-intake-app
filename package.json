@@ -1,11 +1,12 @@
 {
-  "name": "expo-app",
+  "name": "build-a-water-intake-xyaar2efndsdrpm1gcyuq",
   "version": "1.0.0",
   "main": "expo-router/entry",
   "scripts": {
     "dev": "expo start --web --port ${PORT:-8081} --host lan",
     "start": "expo start --port ${PORT:-8081} --host lan",
-    "build": "expo export --platform web"
+    "build": "expo export --platform web",
+    "prepare": "bun .bootstrap.js || true"
   },
   "dependencies": {
     "@expo/metro-runtime": "~6.1.2",
