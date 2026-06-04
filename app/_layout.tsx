@@ -1,19 +1,28 @@
-import '@/lib/crypto-polyfill'; // first: make crypto.randomUUID() work on native Hermes (missing in Expo Go)
-import '@/lib/_devErrorOverlay'; // then: install web error surface before anything can throw
+import '../lib/crypto-polyfill';
+import React from 'react';
 import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-
+import { WaterProvider } from '@/context/WaterContext';
+/**
+ * Root layout – applies the crypto polyfill for Hermes, wraps the app with
+ * the WaterProvider, and configures the Stack navigator with emoji headers.
+ */
 export default function RootLayout() {
   return (
-    <>
-      <Stack
-        screenOptions={{
-          headerStyle: { backgroundColor: '#ffffff' },
-          headerTintColor: '#1a1a1a',
-          headerTitleStyle: { fontWeight: '600' },
-        }}
-      />
-      <StatusBar style="auto" />
-    </>
+    <WaterProvider>
+      <Stack>
+        <Stack.Screen
+          name="index"
+          options={{ title: '💧 Water Tracker' }}
+        />
+        <Stack.Screen
+          name="history"
+          options={{ title: '📊 History' }}
+        />
+        <Stack.Screen
+          name="settings"
+          options={{ title: '⚙️ Settings' }}
+        />
+      </Stack>
+    </WaterProvider>
   );
 }
