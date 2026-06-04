@@ -1,16 +1,16 @@
-// IMPORTANT: keep BOTH the named export (`export const Colors`) and the default export
-// below. The bundled screens import this as `import { Colors }` (named). If this file is
-// ever changed to a default-only export, every named import resolves to `undefined` and the
-// app crashes at runtime ("Cannot read properties of undefined") → blank white screen. You
-// may change the colour VALUES, but always keep `export const Colors` and `export default`.
+/** Water-themed colour palette – named export only */
 export const Colors = {
-  primary: '#007AFF',
-  background: '#ffffff',
-  text: '#1a1a1a',
-  textSecondary: '#666666',
-  border: '#e5e5e5',
-  error: '#FF3B30',
-  success: '#34C759',
+  primary: '#2196F3',
+  primaryLight: '#B3E5FC',
+  primaryDark: '#1565C0',
+  accent: '#0288D1',
+  background: '#E3F2FD',
+  surface: '#FFFFFF',
+  textPrimary: '#0D47A1',
+  textSecondary: '#546E7A',
+  border: '#90CAF9',
+  error: '#FF5252',
+  success: '#4CAF50',
+  waterBlue: '#42A5F5',
+  glassFill: '#64B5F6',
 };
-
-export default Colors;
