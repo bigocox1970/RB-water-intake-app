@@ -23,8 +23,15 @@ export default function RootLayout() {
         <Tabs.Screen
           name="index"
           options={{
-            title: '💧 Water Tracker',
+            title: '💧 Tracker',
             tabBarIcon: () => <Text style={{ fontSize: 20 }}>💧</Text>,
+          }}
+        />
+        <Tabs.Screen
+          name="today"
+          options={{
+            title: '📋 Today',
+            tabBarIcon: () => <Text style={{ fontSize: 20 }}>📋</Text>,
           }}
         />
         <Tabs.Screen

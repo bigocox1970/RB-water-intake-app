@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   },
   content: {
     paddingVertical: 24,
-    paddingHorizontal: 16,
+    paddingHorizontal: 20,
   },
   heading: {
     fontSize: 22,
@@ -97,7 +97,6 @@ const styles = StyleSheet.create({
   inputRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 12,
     marginBottom: 16,
   },
   input: {
@@ -110,6 +109,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     fontSize: 17,
     color: Colors.textPrimary,
+    marginRight: 12,
   },
   saveButton: {
     backgroundColor: Colors.primary,

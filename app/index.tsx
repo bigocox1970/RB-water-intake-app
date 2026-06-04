@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react';
-import { View, Text, ScrollView, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
 import WaterProgress from '@/components/WaterProgress';
 import QuickAdd from '@/components/QuickAdd';
-import DailyLog from '@/components/DailyLog';
+
 import { useWater } from '@/hooks/useWater';
 import { Colors } from '@/constants/Colors';
 /**
@@ -22,33 +22,20 @@ export default function HomeScreen() {
       .reduce((sum, log) => sum + log.amountMl, 0);
   }, [logs]);
   return (
-    <ScrollView
-      style={styles.container}
-      contentContainerStyle={styles.content}
-    >
-      <Text style={styles.heading}>💧 Stay Hydrated</Text>
+    <View style={styles.container}>
       <WaterProgress currentMl={todayTotalMl} goalMl={goalMl} />
       <QuickAdd onAdd={addWater} />
-      <DailyLog />
-
-    </ScrollView>
+    </View>
   );
 }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.background,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  content: {
-    paddingVertical: 20,
-    paddingHorizontal: 16,
-  },
-  heading: {
-    fontSize: 24,
-    fontWeight: '700',
-    color: Colors.textPrimary,
-    textAlign: 'center',
-    marginBottom: 12,
-  },
+
+
 
 });
