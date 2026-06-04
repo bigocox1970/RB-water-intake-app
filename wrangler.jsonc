@@ -1,0 +1,10 @@
+{
+	// Stub config. Expo/React Native runs via Metro in the sandbox and never reads
+	// this file — it exists only so the template pipeline's validity checks
+	// (generate_template_catalog.py is_valid_template + deploy_templates.sh zip loop)
+	// accept expo-app as a first-class template, so the deploy catalogs and zips it
+	// automatically. The app is detected as Expo by name (EXPO_TEMPLATE_NAMES), not
+	// by this file.
+	"name": "expo-app",
+	"compatibility_date": "2025-06-01"
+}
