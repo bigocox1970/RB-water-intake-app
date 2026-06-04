@@ -1,4 +1,4 @@
-import '../lib/crypto-polyfill';
+import '@/lib/crypto-polyfill';
 import React from 'react';
 import { Stack } from 'expo-router';
 import { WaterProvider } from '@/context/WaterContext';
@@ -9,7 +9,13 @@ import { WaterProvider } from '@/context/WaterContext';
 export default function RootLayout() {
   return (
     <WaterProvider>
-      <Stack>
+      <Stack
+        screenOptions={{
+          headerStyle: { backgroundColor: '#3b82f6' },
+          headerTintColor: '#fff',
+          headerTitleStyle: { fontWeight: 'bold' },
+        }}
+      >
         <Stack.Screen
           name="index"
           options={{ title: '💧 Water Tracker' }}
